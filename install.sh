@@ -24,8 +24,7 @@ docker exec magento2-container bin/magento setup:di:compile
 docker exec magento2-container bin/magento cache:flush
 
 # Install Express Checkout
-docker exec magento2-container composer require adyen/adyen-magento2-expresscheckout
-docker exec magento2-container bin/magento module:enable Adyen_ExpressCheckout
+docker exec magento2-container composer require adyen/adyen-magento2:~7.0.0
 
 # Setup upgrade
 docker exec magento2-container bin/magento setup:upgrade
